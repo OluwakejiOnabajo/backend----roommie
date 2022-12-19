@@ -11,7 +11,7 @@ dotenv.config();
 mongoose.set('strictQuery', true);
  
 app.use(express.json());
-app.use(cors());
+app.use(cors({credentials: true, origin: "http://localhost:3000"}));
 app.use("/api", router);
 app.use(cookieParser());
 // mongoose.connect("mongodb+srv://admin:75pt5oW9cNG38MA8@cluster0.sa4gwby.mongodb.net/wegovote?retryWrites=true&w=majority")

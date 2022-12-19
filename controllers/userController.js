@@ -54,7 +54,7 @@ const login = async (req, res, next) => {
     }
     const ispasswordCorrect = bcrypt.compareSync(password, existingUser.password);
     if (!ispasswordCorrect){
-        return res.status(400).json({messgae: "Invalid email / password"});
+        return res.status(400).json({message: "Invalid email / password"});
     }
     const token = jwt.sign({id: existingUser._id }, JWT_SECRET_KEY, {
     expiresIn: "1hr"
