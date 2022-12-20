@@ -9,8 +9,8 @@ router.get('/', (req, res, next) => {
 router.post('/signup', signup);
 router.post('/login', login);
 router.get('/user', verifyToken, getUser);
-router.get('/refresh', refreshToken, verifyToken, getUser);
-router.get('/logout', verifyToken, logout);
+// router.get('/refresh', refreshToken, verifyToken, getUser);
+// router.get('/logout', verifyToken, logout);
 
 
 module.exports = router
